@@ -31,14 +31,30 @@ async function createLogo() {
         ]);
 
         const { text, textColor, shape, shapeColor } = answers;
+
+        let shapeElement = '';
+    
+        switch (shape) {
+          case 'circle':
+            shapeElement = `<circle cx="150" cy="100" r="50" fill="${shapeColor}" />`;
+            break;
+          case 'triangle':
+            shapeElement = `<polygon points="150,50 100,150 200,150" fill="${shapeColor}" />`;
+            break;
+          case 'square':
+          default:
+            shapeElement = `<rect width="100" height="100" fill="${shapeColor}" />`;
+            break;
+        }
+    
         const svgContent = `<?xml version="1.0" standalone="no"?>
-    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-     "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100%" height="100%" fill="${shapeColor}" />
-      <text x="50%" y="50%" text-anchor="middle" fill="${textColor}" font-size="48">${text}</text>
-    </svg>
-    `;
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+         "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+          ${shapeElement}
+          <text x="50%" y="50%" text-anchor="middle" fill="${textColor}" font-size="48">${text}</text>
+        </svg>
+        `;        
 
         fs.writeFileSync('logo.svg', svgContent);
         console.log("Generated logo.svg");
