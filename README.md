@@ -29,7 +29,7 @@ To use this applicaiton (after following installation instructions above), follo
 4. Answer questions in the prompt based on your logo preference
 5. Once complete, right-click on the newly created `logo.svg` file and select `open with live server` or choose whichever browser you want to use
 
-Alternatively, see a walkthrough below: \n
+Alternatively, see a walkthrough below: <br>
 [Walkthrough Video](https://drive.google.com/file/d/1BP_mFrpLcphNMVFexxbRCXyAeM4-KoXs/view)
 
 ## Credits
