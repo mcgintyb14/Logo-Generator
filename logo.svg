@@ -1,8 +1,0 @@
-<?xml version="1.0" standalone="no"?>
-        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-         "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="150,50 100,150 200,150" fill="red" />
-          <text x="50%" y="65%" text-anchor="middle" fill="blacl" font-size="26">HRT</text>
-        </svg>
-        
